@@ -1,0 +1,371 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+/* Navbar */
+.navbar {
+  background: #006666;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo img {
+  max-height: 50px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 18px;
+  display: block;
+  transition: background 0.3s;
+}
+
+.menu li a:hover {
+  background: #004d4d;
+  border-radius: 4px;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #006666;
+  list-style: none;
+  top: 100%;
+  left: 0;
+  padding: 10px 0;
+  min-width: 220px;
+  border-radius: 0 0 6px 6px;
+}
+
+.dropdown-menu li a {
+  padding: 10px 15px;
+  color: #fff;
+}
+
+.dropdown-menu li a:hover {
+  background: #004d4d;
+}
+
+/* Mostra ao passar o mouse */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* ===== Cabeçalho ===== */
+.topo {
+  background: #0d5d5f;
+  padding: 15px 0;
+}
+
+.topo .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topo nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.topo nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.topo nav ul li a.active {
+  border-bottom: 2px solid #fff;
+}
+
+/* ===== Breadcrumb ===== */
+.breadcrumb {
+  background: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.breadcrumb .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.breadcrumb p {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.breadcrumb h1 {
+  color: #0d5d5f;
+  font-size: 2rem;
+}
+
+/* ====== SEÇÃO CONTATO ====== */
+.contato {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 10%;
+  background: #f9f9f9;
+}
+
+.info {
+  flex: 1;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.info h2 {
+  color: #006666;
+}
+
+.info h3 {
+  margin-top: 15px;
+  color: #004d4d;
+}
+
+.social img {
+  width: 30px;
+  margin: 10px 8px 0 0;
+  transition: 0.3s;
+}
+
+.social img:hover {
+  transform: scale(1.1);
+}
+
+/* ====== FORMULÁRIO ====== */
+.formulario {
+  flex: 1;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.formulario button {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #006666;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formulario button:hover {
+  background: #004d4d;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: #006666;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+/* ====== MAPA ====== */
+.mapa {
+  margin-top: 40px;
+  width: 100%;
+  height: 400px;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+/* ===== FOOTER - estilo definitivo baseado no modelo que você mostrou ===== */
+#site-footer {
+  font-family: Arial, sans-serif;
+  color: #003f3f;
+  background: #ffffff; /* fundo branco */
+}
+
+/* Top part */
+#site-footer .footer-top {
+  padding: 50px 20px;
+  border-top: 6px solid transparent; /* espaço superior */
+}
+
+/* Container central */
+#site-footer .footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Colunas */
+#site-footer .footer-col {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+/* Logo */
+#site-footer .footer-logo img {
+  max-width: 200px;
+  display: block;
+}
+
+/* Títulos das colunas */
+#site-footer h4 {
+  font-size: 14px;
+  color: #003f3f;
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #003f3f;
+}
+
+/* Navegação (links lado a lado em duas colunas internas) */
+#site-footer .footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  column-count: 2;
+  column-gap: 40px;
+}
+
+#site-footer .footer-nav li {
+  margin: 8px 0;
+}
+
+#site-footer .footer-nav a {
+  color: #003f3f;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#site-footer .footer-nav a::before {
+  content: "›";
+  color: #1ca3a3;
+  margin-right: 8px;
+  font-weight: 700;
+}
+
+/* Contato */
+#site-footer .footer-contact p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Social icons (círculos) */
+#site-footer .social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+#site-footer .social-icons a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #003f3f;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #003f3f;
+  text-decoration: none;
+  transition: background .2s, color .2s, transform .15s;
+}
+
+#site-footer .social-icons a:hover {
+  background: #003f3f;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Bottom green stripe */
+#site-footer .footer-bottom {
+  background: #0d5d5f; /* faixa verde escura */
+  color: #fff;
+  padding: 14px 20px;
+}
+
+#site-footer .footer-bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap:wrap;
+}
+
+#site-footer .footer-bottom p {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* Badges (à direita) */
+#site-footer .footer-badges {
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+#site-footer .footer-badges .badge {
+  background: rgba(255,255,255,0.12);
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.95;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  #site-footer .footer-container {
+    gap: 20px;
+    padding-bottom: 10px;
+  }
+  #site-footer .footer-nav ul {
+    column-count: 1;
+  }
+  #site-footer .footer-badges { order: 2; width: 100%; justify-content:center; margin-top:8px; }
+  #site-footer .footer-bottom-inner { flex-direction: column; gap: 8px; }
+}
