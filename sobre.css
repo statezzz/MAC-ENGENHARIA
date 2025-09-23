@@ -371,3 +371,46 @@ body {
   font-size: 14px;
   margin-top: 30px;
 }
+
+/* Botão WhatsApp */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #25D366;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+.whatsapp-btn svg {
+  width: 28px;
+  height: 28px;
+}
+
+
+/* Botão Voltar ao Topo */
+.topo-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0b615e;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+.topo-btn:hover {
+  transform: scale(1.1);
+}

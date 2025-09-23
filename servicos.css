@@ -121,96 +121,116 @@ body {
   font-size: 2rem;
 }
 
-/* ====== SEÇÃO CONTATO ====== */
-.contato {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 60px 10%;
-  background: #f9f9f9;
-}
+    /* ===== Seção Serviços ===== */
+    .servicos-pagina {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-.info {
-  flex: 1;
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-}
+    .servicos-intro {
+      text-align: center;
+      margin-bottom: 50px;
+    }
 
-.info h2 {
-  color: #006666;
-}
+    .servicos-intro h2 {
+      color: #0d5d5f;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
 
-.info h3 {
-  margin-top: 15px;
-  color: #004d4d;
-}
+    .servicos-intro p {
+      color: #555;
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
 
-.social img {
-  width: 30px;
-  margin: 10px 8px 0 0;
-  transition: 0.3s;
-}
+    /* Grid de Serviços */
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
 
-.social img:hover {
-  transform: scale(1.1);
-}
+    .servico-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
 
-/* ====== FORMULÁRIO ====== */
-.formulario {
-  flex: 1;
-}
+    .servico-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
 
-.formulario form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+    .servico-imagem {
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
 
-.formulario input,
-.formulario textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
+    .servico-imagem img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
 
-.formulario button {
-  padding: 14px;
-  border: none;
-  border-radius: 8px;
-  background: #006666;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
+    .servico-card:hover .servico-imagem img {
+      transform: scale(1.05);
+    }
 
-.formulario button:hover {
-  background: #004d4d;
-}
+    .servico-conteudo {
+      padding: 20px;
+      position: relative;
+    }
 
-/* ====== FOOTER ====== */
-footer {
-  background: #006666;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-}
-/* ====== MAPA ====== */
-.mapa {
-  margin-top: 40px;
-  width: 100%;
-  height: 400px;
-}
+    .servico-titulo {
+      color: #0d5d5f;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
 
-.mapa iframe {
-  width: 100%;
-  height: 400px;
-  border: none;
-}
-/* ===== Rodapé ===== */
+    .servico-descricao {
+      color: #666;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    .servico-botao {
+      display: inline-block;
+      background: #0d5d5f;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
+    }
+
+    .servico-card:hover .servico-botao {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .servico-botao:hover {
+      background: #004d4d;
+    }
+
+ /* ===== Rodapé ===== */
 .footer *{
     margin: 0;
     padding: 0;
@@ -294,18 +314,27 @@ footer {
   margin-top: 30px;
 }
 
-/* Responsivo */
-@media (max-width: 900px) {
-  #site-footer .footer-container {
-    gap: 20px;
-    padding-bottom: 10px;
-  }
-  #site-footer .footer-nav ul {
-    column-count: 1;
-  }
-  #site-footer .footer-badges { order: 2; width: 100%; justify-content:center; margin-top:8px; }
-  #site-footer .footer-bottom-inner { flex-direction: column; gap: 8px; }
-}
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+      }
+      
+      .menu {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .servicos-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .servicos-intro h2 {
+        font-size: 1.8rem;
+      }
+    }
 
 /* Botão WhatsApp */
 .whatsapp-btn {

@@ -5,24 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MAC Engenharia</title>
   <link rel="stylesheet" href="estilo.css">
+  <style>
+    /* Estilos adicionais para o FAQ interativo */
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      padding: 15px 0;
+    }
+    
+    .faq-item.active .faq-question .icon {
+      transform: rotate(45deg);
+      color: #0d5d5f;
+    }
+  </style>
 </head>
-<body>
+<bo>
 
 <header>
   <nav class="navbar">
     <!-- Logo -->
     <div class="logo">
-      <a href="index.html"><img src="img/logo.png" alt="MAC ENGENHARIA"></a>
+      <a href="index.html"><img src="imagens/logo.jpg" alt="MAC ENGENHARIA"></a>
     </div>
 
-    <!-- Menu -->
-    <ul class="menu">
+   <ul class="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="sobre.html">Sobre Nós</a></li>
-
+      
       <!-- Dropdown Serviços -->
       <li class="dropdown">
-        <a href="#">Serviços ▾</a>
+        <a href="servicos.html">Serviços ▾</a>
         <ul class="dropdown-menu">
           <li><a href="servico1.html">Ensaio de carregamento dinâmico (PDA)</a></li>
           <li><a href="servico2.html">Ensaio de integridade em estacas (PIT)</a></li>
@@ -32,28 +43,25 @@
           <li><a href="servico6.html">Prova de carga estática com reações metálicas</a></li>
         </ul>
       </li>
-
-      <li><a href="blog.html">Blog</a></li>
       <li><a href="contato.html">Contato</a></li>
     </ul>
   </nav>
 </header>
 
+<!-- Seção principal -->
+<section class="hero">
+    <div class="hero-content">
+      <h1>Atuamos de perto para chegar longe</h1>
+      <a href="sobre.html" class="btn">Saiba Mais</a>
+    </div>
+</section>
 
-
-    <!-- Seção principal -->
-    <section class="hero">
-        <div class="hero-content">
-          <h1>Atuamos de perto para chegar longe</h1>
-          <a href="#" class="btn">Saiba Mais</a>
-        </div>
-      </section>
 <!-- Seção SOBRE -->
 <section class="section-sobre">
     <!-- camada de textura fica no CSS -->
     <div class="sobre-wrapper">
       <figure class="sobre-media">
-        <img src="obra.jpg" alt="Obra da MAC Engenharia" loading="lazy">
+        <img src="imagens/obra.jpg" alt="Obra da MAC Engenharia" loading="lazy">
       </figure>
   
       <div class="sobre-content">
@@ -70,7 +78,8 @@
       </div>
     </div>
 </section>
-    <!-- Seção SERVIÇOS -->
+
+<!-- Seção SERVIÇOS -->
 <section class="servicos">
     <div class="servicos-header">
       <p class="subtitulo">CONHEÇA</p>
@@ -85,40 +94,42 @@
   
     <div class="servicos-grid">
       <a href="servico1.html" class="servico-item">
-        <img src="pda.jpg" alt="Ensaio de carregamento dinâmico">
+        <img src="imagens/pda.webp" alt="Ensaio de carregamento dinâmico">
         <h3>Ensaio de carregamento dinâmico (PDA)</h3>
       </a>
   
       <a href="servico2.html" class="servico-item">
-        <img src="pit.jpg" alt="Ensaio de integridade em estacas">
+        <img src="imagens/pda.webp" alt="Ensaio de integridade em estacas">
         <h3>Ensaio de integridade em estacas (PIT)</h3>
       </a>
   
       <a href="servico3.html" class="servico-item">
-        <img src="estrutura.jpg" alt="Prova de carga em estruturas">
+        <img src="imagens/pda.webp" alt="Prova de carga em estruturas">
         <h3>Prova de carga em estruturas</h3>
       </a>
   
       <a href="servico4.html" class="servico-item">
-        <img src="pcs.jpg" alt="Prova de carga em solo">
+        <img src="imagens/pda.webp" alt="Prova de carga em solo">
         <h3>Prova de carga em solo (PCS)</h3>
       </a>
   
       <a href="servico5.html" class="servico-item">
-        <img src="pce.jpg" alt="Prova de carga estática">
+        <img src="imagens/pda.webp" alt="Prova de carga estática">
         <h3>Prova de carga estática (PCE)</h3>
       </a>
   
       <a href="servico6.html" class="servico-item">
-        <img src="metalicas.jpg" alt="Prova de carga estática com reações metálicas">
+        <img src="imagens/pda.webp" alt="Prova de carga estática com reações metálicas">
         <h3>Prova de carga estática com as reações metálicas</h3>
       </a>
     </div>
   
     <div class="servicos-footer">
-      <a href="todos-servicos.html" class="btn-rounded">Conferir todos os serviços</a>
+      <a href="servicos.html" class="btn-rounded">Conferir todos os serviços</a>
     </div>
-  <!-- Seção CTA -->
+</section>
+
+<!-- Seção CTA -->
 <section class="cta">
     <div class="cta-overlay">
       <h2>Entre em contato agora mesmo!</h2>
@@ -147,6 +158,7 @@
     </div>
   </div>
 </section>
+
 <!-- Seção FAQ -->
 <section class="faq">
   <div class="container">
@@ -163,7 +175,15 @@
         <span class="icon">+</span>
       </button>
       <div class="faq-answer">
-        <p>Nem toda obra é obrigada, mas em muitos casos a norma técnica exige. Isso depende do projeto e da fiscalização.</p>
+        <p>Existem casos em que obras pequenas não são obrigadas a executar provas de carga, a não ser que existam dúvidas quanto ao desempenho das estacas.</p>
+        <p>A norma ABNT NBR 6122:2022 (Projeto e execução de fundações), no item 9.2.21 apresenta a Tabela 6, que indica a quantidade mínima de provas de carga que uma obra deve realizar, em função da tensão de trabalho, do tipo e da quantidade de estacas que essa possui.</p>
+        <p>A seguir apresentaremos um resumo com os tipos mais usuais de estaca:</p>
+        <ul>
+          <li>Pré-moldada, aço, hélice contínua, frankl, Strauss e escavada sem fluido com diâmetro inferior a 70cm - Obrigatório a partir de 100 estacas.</li>
+          <li>Escavadas com ou sem fluido e diâmetro superior a 70 cm, raiz microestaca - Obrigatório a partir de 75 estacas.</li>
+          <li>Trado vazado segmentado - Obrigatório a partir de 50 estacas</li>
+        </ul>
+        <p>Finalmente, para as obras que possuem estacas em número inferior ao indicado acima, ainda é necessário verificar se a tensão de trabalho dos elementos não supera os valores indicados na Coluna A da Tabela 6, caso contrário, os ensaios são obrigatórios.</p>
       </div>
     </div>
 
@@ -173,7 +193,11 @@
         <span class="icon">+</span>
       </button>
       <div class="faq-answer">
-        <p>A quantidade depende do porte da obra e do que está definido no projeto executivo.</p>
+        <p>A quantidade de provas de carga necessárias depende do tipo de estaca e da quantidade utilizada na obra, conforme estabelecido pela norma ABNT NBR 6122:2022.</p>
+        <p>Para estacas pré-moldadas, de aço, hélice contínua, frankl, Strauss e escavada sem fluido com diâmetro inferior a 70cm, as provas de carga são obrigatórias a partir de 100 estacas.</p>
+        <p>Para estacas escavadas com ou sem fluido e diâmetro superior a 70 cm, e raiz microestaca, a obrigatoriedade começa a partir de 75 estacas.</p>
+        <p>Para trado vazado segmentado, a exigência é a partir de 50 estacas.</p>
+        <p>Para obras com quantidade de estacas inferior aos limites mencionados, é necessário verificar se a tensão de trabalho não supera os valores indicados na Coluna A da Tabela 6 da norma.</p>
       </div>
     </div>
 
@@ -183,7 +207,9 @@
         <span class="icon">+</span>
       </button>
       <div class="faq-answer">
-        <p>O PDA é aceito em diversas situações, mas pode ser exigida a prova de carga estática dependendo do tipo de fundação.</p>
+        <p>Sim, em muitos casos é possível realizar apenas o ensaio de carregamento dinâmico (PDA) como método de verificação da capacidade de carga das estacas.</p>
+        <p>O ensaio PDA é uma alternativa eficiente e mais rápida em comparação com a prova de carga estática (PCE), sendo amplamente aceito pelas normas técnicas quando executado corretamente.</p>
+        <p>No entanto, é importante consultar o projeto estrutural e verificar com o responsável técnico se o PDA atende a todos os requisitos específicos da obra, pois em alguns casos particulares a prova de carga estática pode ser exigida.</p>
       </div>
     </div>
 
@@ -193,7 +219,15 @@
         <span class="icon">+</span>
       </button>
       <div class="faq-answer">
-        <p>O ensaio dinâmico costuma ser mais econômico, mas cada caso deve ser avaliado por um engenheiro responsável.</p>
+        <p>De modo geral, o ensaio de carregamento dinâmico (PDA) costuma ser a opção mais econômica, pois:</p>
+        <ul>
+          <li>É mais rápido de executar</li>
+          <li>Requer menos equipamentos e mão de obra</li>
+          <li>Pode ser realizado em um maior número de estacas no mesmo período</li>
+          <li>Não necessita de estruturas de reação complexas</li>
+        </ul>
+        <p>No entanto, a escolha do tipo de ensaio deve considerar as especificidades do projeto, o tipo de estaca utilizada e as exigências do responsável técnico pela obra.</p>
+        <p>Em alguns casos, uma combinação de ensaios (como PDA para a maioria das estacas e PCE para algumas de referência) pode ser a solução mais equilibrada entre custo e confiabilidade.</p>
       </div>
     </div>
 
@@ -203,7 +237,15 @@
         <span class="icon">+</span>
       </button>
       <div class="faq-answer">
-        <p>Não necessariamente, depende do tipo de fundação e do que está previsto nas normas técnicas.</p>
+        <p>Não, nem toda obra é obrigada a realizar prova de carga em solo (ensaio de placa). A necessidade desse ensaio depende de vários fatores, como:</p>
+        <ul>
+          <li>Tipo de fundação adotada (rasa ou profunda)</li>
+          <li>Características do solo no local da obra</li>
+          <li>Magnitude das cargas a serem transmitidas ao terreno</li>
+          <li>Existência de dados confiáveis de investigação geotécnica</li>
+        </ul>
+        <p>O ensaio de placa é geralmente recomendado quando há dúvidas sobre a capacidade de carga do solo ou quando não existem dados suficientes de investigação geotécnica.</p>
+        <p>Em obras de pequeno porte com cargas reduzidas, ou quando há investigação geotécnica detalhada que comprove a capacidade de carga do solo, o ensaio pode não ser necessário.</p>
       </div>
     </div>
 
@@ -213,66 +255,106 @@
         <span class="icon">+</span>
       </button>
       <div class="faq-answer">
-        <p>O PIT é recomendado para verificar a integridade das estacas, mas sua obrigatoriedade varia conforme o projeto.</p>
+        <p>Não, o ensaio de integridade (PIT) não é obrigatório para todas as obras, mas é altamente recomendado em diversos casos, como:</p>
+        <ul>
+          <li>Quando há suspeita de defeitos nas estacas</li>
+          <li>Para verificação da qualidade de execução das fundações</li>
+          <li>Em obras com elevado número de estacas</li>
+          <li>Quando as estacas são executadas em solos problemáticos</li>
+          <li>Para estacas de grande diâmetro ou com elevada carga de trabalho</li>
+        </ul>
+        <p>O PIT é um ensaio não destrutivo, rápido e de custo relativamente baixo, que pode detectar problemas como estreitamentos, alargamentos, trincas ou descontinuidades nas estacas.</p>
+        <p>A decisão sobre a realização do PIT deve considerar o tipo de estaca, as condições do solo e a criticidade da estrutura.</p>
       </div>
     </div>
-    
-
   </div>
 </section>
 
-<!-- ===== Rodapé ===== -->
+ <!-- Botão WhatsApp -->
+<a href="https://wa.me/5500000000000" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32">
+    <path fill="#25D366" d="M16 .395c-8.837 0-16 7.163-16 16 0 2.837.747 5.614 2.164 8.053L.026 32l7.757-2.034A15.86 15.86 0 0 0 16 32c8.837 0 16-7.163 16-16s-7.163-15.605-16-15.605z"/>
+    <path fill="#FFF" d="M16 3.484c-7.044 0-12.762 5.718-12.762 12.762 0 2.248.586 4.446 1.706 6.393L4.184 28l5.566-1.46a12.7 12.7 0 0 0 6.25 1.666c7.044 0 12.762-5.718 12.762-12.762S23.044 3.484 16 3.484z"/>
+    <path fill="#25D366" d="M24.26 19.546c-.372-.186-2.197-1.085-2.537-1.21-.34-.124-.588-.186-.835.186-.248.372-.959 1.21-1.176 1.459-.217.248-.434.279-.806.093-.372-.186-1.571-.578-2.992-1.843-1.106-.985-1.851-2.202-2.068-2.574-.217-.372-.023-.574.163-.76.168-.167.372-.434.558-.65.186-.217.248-.372.372-.62.124-.248.062-.465-.031-.651-.093-.186-.835-2.016-1.145-2.768-.302-.726-.61-.627-.835-.64-.217-.012-.465-.015-.713-.015s-.651.093-.992.465c-.34.372-1.302 1.27-1.302 3.097s1.333 3.59 1.518 3.838c.186.248 2.624 4.004 6.357 5.616.889.383 1.582.61 2.122.781.891.284 1.702.244 2.344.148.715-.106 2.197-.898 2.507-1.767.31-.868.31-1.611.217-1.767-.093-.155-.34-.248-.713-.434z"/>
+  </svg>
+</a>
+
+<!-- Botão Voltar ao Topo -->
+<a href="#" class="topo-btn" aria-label="Voltar ao topo">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+    <path d="M12 2l7 7h-4v9h-6v-9H5l7-7z"/>
+  </svg>
+</a>
+
+
 <footer class="footer">
   <div class="footer-container">
-
+    
     <!-- Logo -->
     <div class="footer-logo">
-      <h3>MAC Engenharia</h3>
+      <img src="imagens/logo.jpg" alt="MAC Engenharia">
     </div>
 
     <!-- Navegação -->
     <div class="footer-nav">
       <h4>NAVEGAÇÃO</h4>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Sobre Nós</a></li>
-        <li><a href="#">Serviços</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contato</a></li>
-        <li><a href="#">Mapa do Site</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
       </ul>
     </div>
 
     <!-- Contato -->
     <div class="footer-contact">
       <h4>CONTATO</h4>
-      <p>📍 R. Eng. Antônio Pônzio Ippólito, 75<br>
-         Vila Jaguara - São Paulo - SP<br>
-         CEP: 05117-090
-      </p>
-      <p>📱 (31) 99697-2065</p>
-      <p>✉️ alexsandro.maceng@gmail.com</p>
+      <p>📍 Rua Exemplo, 123 - São Paulo/SP</p>
+      <p>CEP: 00000-000</p>
+      <p>📞 (31) 99697-2065</p>
+      <p>✉ alexsandro.maceng@gmail.com</p>
     </div>
 
     <!-- Redes sociais -->
     <div class="footer-social">
-      <h4>SIGA-NOS</h4>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-      </div>
+      <h4>SIGA-NOS!</h4>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
+
   </div>
 
-  <!-- Linha inferior -->
+  <!-- Barra inferior -->
   <div class="footer-bottom">
     <p>Copyright © MAC Engenharia.</p>
   </div>
 </footer>
-
 <!-- Importando ícones do Font Awesome -->
-<script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- Script para o FAQ interativo -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      
+      question.addEventListener('click', () => {
+        // Fecha todas as outras respostas
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+          }
+        });
+        
+        // Alterna a resposta atual
+        item.classList.toggle('active');
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
